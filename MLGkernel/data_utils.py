@@ -3,6 +3,7 @@ import numpy as np
 import scipy as sc
 import os
 import re
+import sys
 
 
 def read_graphfile(datadir, dataname, max_nodes=None):
@@ -88,9 +89,12 @@ def read_graphfile(datadir, dataname, max_nodes=None):
                 node_label_one_hot = [0] * num_unique_node_labels
                 node_label = node_labels[u-1]
                 node_label_one_hot[node_label] = 1
-                G.node[u]['label'] = node_label_one_hot
+
+                # G.node[u]['label'] = node_label_one_hot
+                G.nodes[u]['label'] = node_label_one_hot
             if len(node_attrs) > 0:
-                G.node[u]['feat'] = node_attrs[u-1]
+                # G.node[u]['feat'] = node_attrs[u-1]
+                G.nodes[u]['feat'] = node_attrs[u-1]
         if len(node_attrs) > 0:
             G.graph['feat_dim'] = node_attrs[0].shape[0]
 

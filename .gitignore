@@ -8,4 +8,7 @@ checkpoint
 tmp
 *.nexf
 results
+*.o
+data
+*.log
 

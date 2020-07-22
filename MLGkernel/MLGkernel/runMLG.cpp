@@ -111,7 +111,7 @@ int main(int argc, char * argv[]){
     {"grow_or_double", required_argument, 0, 'm'}, // bool flag to grow(by the radius) or double
     {0,0,0,0}
   };
-
+  
   // Some default settings
   int index;
   int iarg=0;

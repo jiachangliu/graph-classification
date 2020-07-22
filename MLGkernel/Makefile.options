@@ -3,7 +3,8 @@
 ############################################
 
 ## Set the C++ compiler 
-CC= g++
+# CC= g++
+CC= /data/jl888/anaconda3/envs/gcc/bin/x86_64-conda_cos6-linux-gnu-cc
 
 ## Path to MATLAB installation 
 #MATLABDIR= /Applications/MATLAB_R2015b.app/
@@ -14,4 +15,6 @@ MATLABDIR= /usr/local/bin/matlab
 ############################################
 
 ## path to Eigen
-EIGENDIR= /usr/local/include/eigen3/
+#EIGENDIR= /usr/local/include/eigen3/
+#EIGENDIR = /data/jl888/anaconda3/envs/gcc/share/eigen3/
+EIGENDIR= /data/jl888/anaconda3/envs/gcc/include/eigen3/

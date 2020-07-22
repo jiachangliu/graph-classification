@@ -3,8 +3,10 @@
 A collection of graph classiifcation methods.
 
 All methods are more or less modified to accept graph data from [https://ls11-www.cs.tu-dortmund.de/staff/morris/graphkerneldatasets]() 
+Codes are adapted from [https://github.com/fanyun-sun/graph-classification]() and [https://github.com/horacepan/MLGkernel]()
 
 Download data to `./data` and refer to `go.sh` under every directory for example usage.
+To compile successfully, it's better to do a full compiling by doing both "make clean" and "make all"
 
 Methods
 * DGK: [Deep Graph Kernels](http://www.mit.edu/~pinary/kdd/YanVis15.pdf) [[source](http://www.mit.edu/~pinary/kdd/)]

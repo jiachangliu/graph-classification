@@ -18,21 +18,24 @@ mkdir -p $BASE/data/results/
 #~/ENV/bin/python3 preprocess.py $dset
 python preprocess.py $dset
 
-for r in 1 2 3 4
-do 
-  for l in 1 2 3 4
-  do
-    for g in 0.01 0.1 1
-    do
-      for e in 0.01 0.1 1
-      do
+# for r in 1 2 3 4
+# do 
+#   for l in 1 2 3 4
+#   do
+#     for g in 0.01 0.1 1
+#     do
+#       for e in 0.01 0.1 1
+#       do
+r=1
+l=2
+g=0.1
+e=0.1
 
+for iter in 1 2 3 4 5
+do
   cd MLGkernel
   ./runMLG -d $data -f $feats -s $save -r $r -l $l -e $e -g $g -t 32 -m 1
   cd ../
   #~/ENV/bin/python3 evaluate_embedding.py $dset >> $dset.log
   python evaluate_embedding.py $dset >> $dset.log
-      done
-    done
-  done
 done
